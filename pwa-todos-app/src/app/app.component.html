@@ -1,0 +1,8 @@
+<h1>Hello, {{ title }}</h1>
+v2
+
+<ul>
+  @for( todo of todos$|async;track todo){
+  <li>{{ todo.title }}</li>
+  }
+</ul>

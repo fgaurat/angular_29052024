@@ -8,7 +8,7 @@ import {
   loadTodo,
   loadTodoOk,
 } from '../todo/todo.actions';
-import { map, switchMap } from 'rxjs';
+import { map, of, switchMap } from 'rxjs';
 import { Todo } from '../models/todo';
 
 @Injectable({
@@ -42,7 +42,8 @@ export class TodoEffectService {
     return this.actions$.pipe(
       ofType(addTodo),
       switchMap((action) => this.todoService.save(action.todo)),
-      map(() => loadTodo())
+      // map(() => loadTodo())
+      switchMap(() => of(loadTodo()))
 
       // map((todos: Todo[]) => loadTodoOk({ todos }))
     );
