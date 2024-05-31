@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { Todo } from '../../models/todo';
 import { EMPTY, Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
-import { loadTodo } from '../todo.actions';
+import { deleteTodo, loadTodo } from '../todo.actions';
 
 @Component({
   selector: 'app-todo-list',
@@ -20,5 +20,7 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
     this.store.dispatch(loadTodo());
   }
-  onDelete(todo: Todo) {}
+  onDelete(todo: Todo) {
+    this.store.dispatch(deleteTodo({ todo }));
+  }
 }
