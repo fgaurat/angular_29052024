@@ -9,6 +9,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { TodoListSignalComponent } from './todo-list-signal/todo-list-signal.component';
+
 
 
 
@@ -16,7 +18,8 @@ import {MatInputModule} from '@angular/material/input';
   declarations: [
     TodoListComponent,
     TodoFormComponent,
-    TodoReactiveformComponent
+    TodoReactiveformComponent,
+    TodoListSignalComponent
   ],
   imports: [
     CommonModule,
@@ -26,6 +29,6 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatFormFieldModule,MatInputModule,ReactiveFormsModule
   ],
-  exports:[TodoListComponent,TodoFormComponent, TodoReactiveformComponent]
+  exports:[TodoListComponent,TodoFormComponent, TodoReactiveformComponent,TodoListSignalComponent]
 })
 export class TodoModule { }

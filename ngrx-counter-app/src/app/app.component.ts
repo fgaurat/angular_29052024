@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
+  standalone: true
   imports: [RouterOutlet,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -36,5 +36,5 @@ export class AppComponent {
   reset() {
     this.store.dispatch(reset());
   }
-  
+
 }

@@ -16,7 +16,7 @@ import { TodoModule } from './todo/todo.module';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
+
   title = 'todos-app';
 
 

@@ -14,6 +14,7 @@ export class IncComponent {
 
   inc() {
     this.count.inc();
-    this.count.count.set(12);
   }
+
+
 }
